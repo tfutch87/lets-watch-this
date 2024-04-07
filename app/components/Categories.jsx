@@ -1,7 +1,6 @@
 import React from 'react'
 
-export default function 
-() {
+export default function Categories() {
   return (
     <div className="container py-2 px-4">
 
