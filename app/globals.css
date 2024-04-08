@@ -104,3 +104,16 @@ span{
 .backButton{
   width: 100%;
 }
+
+.pagination button{
+  color: #f8f5f5;
+  background-color: #1f1f1f;
+  border: none;
+  border-radius: 0;
+
+}
+
+.pagination .MuiPaginationItem-ellipsis{
+  color: #f8f5f5;
+
+}

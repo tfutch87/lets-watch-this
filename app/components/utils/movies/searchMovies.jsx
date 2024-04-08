@@ -2,9 +2,11 @@
 
 import React from 'react'
 
-export default async function searchMovies(prop) {
+export default async function searchMovies(prop, page) {
 
-const response = await fetch(`http://www.omdbapi.com/?apikey=${process.env.OMDB_API}&s=${prop}`);
+  console.log(prop, page)
+
+const response = await fetch(`http://www.omdbapi.com/?apikey=${process.env.OMDB_API}&s=${prop}&page=${page}`);
 
 const results = await response.json();
 
