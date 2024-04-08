@@ -29,7 +29,7 @@ export default function Page({ params }) {
         };
 
         fetchData();
-    }, [currentPage]);
+    }, [params.search,currentPage]);
 
     const handlePageChange = (pageNumber) => {
         setCurrentPage(pageNumber);
