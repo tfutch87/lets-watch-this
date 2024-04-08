@@ -15,7 +15,6 @@ export default function Page({ params }) {
     const [results, setResults] = useState(null);
     const [total, setTotal] = useState(0);
     const [pages, setPages] = useState(0);
-    const router = useRouter();
 
 
     useEffect(() => {
@@ -25,7 +24,6 @@ export default function Page({ params }) {
             setResults(response);
             setTotal(response.totalResults);
             setPages(Math.floor(response.totalResults / 10));
-            router.refresh();
         };
 
         fetchData();
