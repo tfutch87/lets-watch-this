@@ -100,3 +100,7 @@ span{
   height: 100%;
   background-color: #03030330;
 }
+
+.backButton{
+  width: 100%;
+}

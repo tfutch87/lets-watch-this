@@ -1,6 +1,8 @@
 import React from 'react'
 import MobileHero from '../../components/MobileHero'
 import getMovie from '../../components/utils/movies/getMovie'
+import Link from 'next/link';
+import BackButton from '../../components/BackButton'
 
 
 export default async function page({ params }) {
@@ -9,6 +11,7 @@ export default async function page({ params }) {
 
   return (
     <>
+    
       <MobileHero imdbVotes={movie.imdbVotes} poster={movie.Poster} tt={params.tt} />
       <div className='px-2 py-4'>
         <div className='flex justify-between'>
@@ -33,6 +36,8 @@ export default async function page({ params }) {
           </div>
         </div>
       </div>
+
+ 
     </>
   )
 }

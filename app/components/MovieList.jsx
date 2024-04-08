@@ -9,19 +9,12 @@ export default async function MovieList(props) {
 
     const movies = await getMovies(props.search);
 
-
     function returnString(string){
 
         const tt = JSON.stringify(string).replace(/\"/g, "")
        
         return  `/Movie/${tt}/`
     }
-
-    // convert to string remove ""s
-    // const imdbID = JSON.stringify(movies.imdbID).replace(/\"/g, "");
-   
-
-
 
     return (
         <div className="container p-4">
