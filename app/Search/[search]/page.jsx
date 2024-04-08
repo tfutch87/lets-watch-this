@@ -6,7 +6,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import BackButton from '../../components/BackButton';
 import Search from '../../components/Search';
-import { useRouter } from 'next/navigation';
 import Pagination from '@mui/material/Pagination';
 import HomeIcon from '@mui/icons-material/Home';
 
