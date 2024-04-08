@@ -8,7 +8,6 @@ import Link from 'next/link';
 export default async function MovieList(props) {
 
     const movies = await getMovies(props.search);
-    console.log("🚀 ~ MovieList ~ movies:", movies.Search)
 
 
     function returnString(string){
