@@ -17,7 +17,6 @@ export default function Page({ params }) {
 
 
     useEffect(() => {
-        console.log('ran')
         const fetchData = async () => {
             const response = await searchMovies(params.search, currentPage);
             setResults(response);
@@ -26,7 +25,7 @@ export default function Page({ params }) {
         };
 
         fetchData();
-    }, [params.search,currentPage]);
+    }, [params.search, currentPage]);
 
     const handlePageChange = (pageNumber) => {
         setCurrentPage(pageNumber);
@@ -45,10 +44,10 @@ export default function Page({ params }) {
                                     </span>
                                     <h1 className='text-lg'> Search Results</h1>
                                     <Link className='block' href={'/'}>
-                                    <HomeIcon sx={{ backgroundColor: "#37373759", fontSize: "0.5em", height: "25px", width: "25px", borderRadius: "50%", cursor: "pointer", float: "right" }} />
-                                </Link>
+                                        <HomeIcon sx={{ backgroundColor: "#37373759", fontSize: "0.5em", height: "25px", width: "25px", borderRadius: "50%", cursor: "pointer", float: "right" }} />
+                                    </Link>
                                 </div>
-                             
+
                             </div>
                             <Search />
 
@@ -69,18 +68,18 @@ export default function Page({ params }) {
             <div className='container'>
                 <div className='row'>
                     <div className='px-2 py-4'>
-                    <div>
-                                <div className='text-center align-middle justify-between flex text-lg'>
-                                    <span className='block'>
-                                        <BackButton />
-                                    </span>
-                                    <h1 className='text-lg'> Search Results</h1>
-                                    <Link className='block' href={'/'}>
+                        <div>
+                            <div className='text-center align-middle justify-between flex text-lg'>
+                                <span className='block'>
+                                    <BackButton />
+                                </span>
+                                <h1 className='text-lg'> Search Results</h1>
+                                <Link className='block' href={'/'}>
                                     <HomeIcon sx={{ backgroundColor: "#37373759", fontSize: "0.5em", height: "25px", width: "25px", borderRadius: "50%", cursor: "pointer", float: "right" }} />
                                 </Link>
-                                </div>
-                             
                             </div>
+
+                        </div>
                         <div className='flex justify-evenly gap-2 py-4 flex-wrap'>
                             {results &&
                                 results.Search.map((movie, index) => (
@@ -103,19 +102,12 @@ export default function Page({ params }) {
                                     </div>
                                 ))}
                         </div>
-                        {/* Add pagination buttons here */}
                         <div className='pagination text-zinc-200'>
-                            {/* {Array.from({ length: pages }, (_, i) => i + 1).map((page) => ( */}
-
-
                             <Pagination
-
-                                key={pages}
                                 count={pages}
                                 page={currentPage}
                                 onChange={(event, currentPage) => handlePageChange(currentPage)}
                             />
-                            {/* ))} */}
                         </div>
                     </div>
                 </div>
